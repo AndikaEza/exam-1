@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="index.html#home" class="logo">ANDIKA EZA</a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Buka menu"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav" aria-label="Navigasi utama">
+        <a href="index.html">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="about" class="about">
+      <div class="aboutme">
+        <h2>About me</h2>
+
+        <div class="content">
+          <h3>
+            I am a front-end developer based in Sydney. Has Mechanical
+            Engineering background.
+          </h3>
+          <p>
+            I am a front-end developer based in Sydney looking for exciting
+            opportunities. Has Mechanical Engineering background. Likes to focus
+            on accessibility when developing. Passionate and curious about
+            solving problems. Currently, I’m exploring Reactjs, Webflow and a
+            bit of Designing. While I am not programming, I enjoy playing
+            football, photography and playing Valorant. Learning more to improve
+            skill.
+          </p>
+          <div class="about-actions">
+            <a href="#" class="btn-primary"
+              >DOWNLOAD RESUME
+              <div class="dot"></div>
+              <img
+                src="images/bx-download.svg.svg"
+                alt="download-icon"
+                class="download"
+              />
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" class="social-icon"
+              ><img src="images/bxl-linkedin.svg.svg" alt="icon-linkedin"
+            /></a>
+            <a href="https://github.com" target="_blank" class="social-icon"
+              ><img src="images/bxl-github.svg.svg" alt="icon-github"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap-img">
+        <img src="images/Chibi Racer Double Thumbs Up.png" alt="about-img" />
+      </div>
+
+      <div class="capabilities">
+        <h2>My Capabilities</h2>
+        <div class="skill">
+          <p class="title-skill">
+            I am always looking to add more skills.Morbi egestas neque eu
+            blandit fermentum. Nulla ac lobortis ligula. Pellentesque ac ex at
+            purus faucibus tristique ut et dolor.
+          </p>
+          <div class="skill-badge">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JAVASCRIPT</p>
+            <p>JQUERY</p>
+            <p>ACCESSBILITY</p>
+            <p>FIGMA</p>
+            <p>TAILWIND CSS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="my-experience">
+        <h2>My Experience</h2>
+        <div class="wrap-exp">
+          <div class="exp-list">
+            <div class="exp-head">
+              <h3>Freelance Developer</h3>
+              <p>Nov 2023 — Present</p>
+            </div>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit in voluptate velit esse cillum dolore
+              eu fugiat nulla pariatur.
+            </p>
+          </div>
+
+          <div class="exp-list">
+            <div class="exp-head">
+              <h3>Front-End Intern</h3>
+              <p>Sep 2023 — Nov 2023</p>
+            </div>
+            <span>Roos Tech</span>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit in voluptate velit esse cillum dolore
+              eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="connectme">
+        <div class="connect-wrap">
+          <div>
+            <h2>Let's connect</h2>
+            <p>
+              Say hello at
+              <a href="mailto:robertgarcia@gmail.com" class="underline"
+                >andikaezasatria@gmail.com</a
+              >
+            </p>
+            <p>
+              For more info, here's my <a href="#" class="underline">resume</a>
+            </p>
+            <div class="socials">
+              <a href="#">
+                <img src="images/bxl-linkedin.svg.svg" alt="linkedin-icon" />
+              </a>
+              <a href="#">
+                <img src="images/bxl-github.svg.svg" alt="github-icon" />
+              </a>
+              <a href="#">
+                <img src="images/x-icon.svg" alt="x-icon" />
+              </a>
+              <a href="#">
+                <img src="images/bxl-instagram.svg.svg" alt="instagram-icon" />
+              </a>
+            </div>
+          </div>
+          <div class="credits">© 2023 ANDIKA EZA</div>
+        </div>
+
+        <form id="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="John Doe" />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" />
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="5"></textarea>
+
+          <button type="submit" class="btn">SUBMIT</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>© 2023 ANDIKA EZA</footer>
+
+    <script src="about.js"></script>
+  </body>
+</html>

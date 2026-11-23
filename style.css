@@ -1,0 +1,830 @@
+:root {
+  --bg: #080808;
+  --surface: #141414;
+  --line: #2a2a2a;
+  --text: #ffffff;
+  --muted: #b5b5b5;
+  --accent: #d9f26a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 64px;
+  background-color: var(--bg);
+}
+
+.logo {
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--text);
+  letter-spacing: 2px;
+}
+
+.navbar nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 32px;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content h1 {
+  font-size: 92px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.hero-content h1 strong {
+  color: var(--accent);
+}
+
+.hero-desc {
+  color: var(--muted);
+  width: 500px;
+  margin-bottom: 24px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--surface);
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover,
+.connectme form button:hover,
+.dot {
+  background-color: var(--bg);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.hero-actions .btn-primary .dot {
+  margin-left: 6px;
+  background-color: var(--bg);
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+}
+
+.hero-actions .btn-primary .arrow {
+  background-color: var(--bg);
+  color: var(--text);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+.social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--line);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.hero-image img {
+  width: 350px;
+}
+
+.projects {
+  padding: 64px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.section-head {
+  margin-bottom: 24px;
+}
+
+.section-head h2 {
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 480px;
+}
+
+.project-card {
+  display: flex;
+  gap: 40px;
+}
+
+.project-img {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface);
+}
+
+.badge-wrap {
+  width: 300px;
+  display: flex;
+}
+
+.badge {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.no-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-img img {
+  padding: 32px;
+  width: 340px;
+}
+
+.project-info h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.project-info p {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.project-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.info-list {
+  list-style: none;
+  margin-bottom: 24px;
+}
+.info-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.info-list li:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.project-links {
+  display: flex;
+  gap: 24px;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.icon-git {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid var(--accent);
+}
+
+#about {
+  padding: 64px;
+  height: 700px;
+  border-bottom: 1px solid var(--line);
+}
+
+#about img {
+  display: none;
+  width: 200px;
+}
+
+.aboutme {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.aboutme h2 {
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.aboutme div {
+  width: 700px;
+}
+
+.aboutme div h3 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.aboutme div p {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.aboutme div a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+.connectme {
+  padding: 64px;
+  height: 700px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.connectme .connect-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.connectme .connect-wrap .credits {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-bottom: 44px;
+}
+
+.connectme .connect-wrap div h2 {
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.connectme .connect-wrap div p {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.connectme .connect-wrap div p a {
+  font-size: 16px;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+.connectme .connect-wrap div .socials {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.connectme form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.connectme form label {
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.connectme form input {
+  background-color: var(--line);
+  color: var(--text);
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.connectme form textarea {
+  margin-bottom: 32px;
+  height: 156px;
+  background-color: var(--line);
+  color: var(--text);
+  border: none;
+  border-radius: 4px;
+}
+
+.connectme form button {
+  background-color: var(--accent);
+  color: var(--surface);
+  font-size: 16px;
+  font-weight: 700;
+  width: 150px;
+  height: 54px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 80px;
+}
+
+footer {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .social-icon {
+    height: 44px;
+    box-sizing: border-box;
+  }
+
+  .hero-actions .social-icon {
+    width: 44px;
+    flex: 0 0 44px;
+  }
+}
+
+@media (max-width: 860px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar {
+    padding: 18px 24px;
+  }
+
+  .btn-primary:hover,
+  .connectme form button:hover,
+  .dot {
+    background-color: var(--bg);
+    border: 2px solid var(--accent);
+    color: var(--accent);
+  }
+
+  /* hamburger */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--text);
+  }
+
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 58px;
+    right: 18px;
+    z-index: 5;
+    min-width: 150px;
+    padding: 8px 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+
+  .navbar nav.tampil-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar nav a {
+    display: block;
+    margin: 0;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 28px;
+    padding: 34px 24px 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 54px;
+  }
+
+  .hero-desc {
+    width: auto;
+    max-width: 480px;
+    font-size: 14px;
+    margin: 12px 0 20px;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    margin-top: 24px;
+    width: min(100%, 300px);
+    border-radius: 8px;
+  }
+
+  .projects {
+    padding: 44px 24px;
+    gap: 40px;
+  }
+
+  .section-head {
+    margin-bottom: 0;
+  }
+
+  .section-head h2 {
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .section-head p,
+  .project-info p {
+    font-size: 13px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .project-img {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+  }
+
+  .badge-wrap {
+    width: 100%;
+  }
+
+  .badge {
+    margin-bottom: 8px;
+  }
+
+  .project-img img {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    object-fit: contain;
+    padding: 12px;
+  }
+
+  .project-info h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .project-info p {
+    margin-bottom: 18px;
+  }
+
+  .project-info h4 {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .info-list {
+    margin-bottom: 18px;
+  }
+
+  .info-list li {
+    padding: 9px 0;
+    font-size: 12px;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+    gap: 14px 20px;
+  }
+
+  .link-btn {
+    font-size: 11px;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px 32px;
+    height: auto;
+  }
+
+  #about img {
+    margin-top: 44px;
+    display: block;
+    width: 250px;
+  }
+
+  .aboutme {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .aboutme h2 {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .aboutme div {
+    width: 100%;
+  }
+
+  .aboutme div h3 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .aboutme div p {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .about-image {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 8px;
+  }
+
+  .connectme {
+    height: auto;
+    padding: 40px 24px 24px;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .connectme .connect-wrap {
+    width: 100%;
+    gap: 24px;
+  }
+
+  .connectme .connect-wrap .credits {
+    display: none;
+  }
+
+  .connectme .connect-wrap div h2 {
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .connectme .connect-wrap div p {
+    font-size: 13px;
+  }
+
+  .connectme .connect-wrap div p a {
+    font-size: inherit;
+  }
+
+  .connectme .connect-wrap div .socials {
+    margin-top: 24px;
+    gap: 20px;
+  }
+
+  .socials img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .connectme form {
+    width: 100%;
+  }
+
+  .connectme form input {
+    font-size: 16px;
+    padding: 11px 14px;
+  }
+
+  .connectme form textarea {
+    min-height: 130px;
+    margin-bottom: 20px;
+  }
+
+  .connectme form button {
+    width: 160px;
+    height: 44px;
+    padding: 10px 16px;
+    border-radius: 100px;
+    font-size: 14px;
+  }
+
+  footer {
+    display: block;
+    padding: 24px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+  }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 480px) {
+  .btn-primary:hover,
+  .connectme form button:hover,
+  .arrow {
+    background-color: var(--bg);
+    border: 2px solid var(--accent);
+    color: var(--accent);
+  }
+
+  .navbar {
+    padding: 14px 18px;
+  }
+
+  .hero {
+    padding: 28px 18px 24px;
+    gap: 22px;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+  }
+
+  .section-head h2 {
+    font-size: 38px;
+  }
+
+  .hero-desc {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .btn-primary {
+    height: 40px;
+    min-height: 40px;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .hero-actions {
+    gap: 8px;
+  }
+
+  .hero-actions .btn-primary .dot {
+    display: none;
+  }
+
+  .hero-actions .btn-primary .arrow {
+    padding: 4px;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+  }
+
+  .social-icon img {
+    width: 17px;
+    height: 17px;
+  }
+
+  .projects {
+    padding: 34px 18px;
+    gap: 34px;
+  }
+
+  .project-img img {
+    max-height: 300px;
+  }
+
+  #about,
+  .connectme {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  #about img {
+    margin-top: 44px;
+    width: 200px;
+  }
+
+  .connectme .connect-wrap .credits {
+    display: none;
+  }
+
+  .connectme form button {
+    width: 120px;
+    height: 40px;
+  }
+
+  footer {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+  }
+}

@@ -1,0 +1,618 @@
+:root {
+  --bg: #080808;
+  --surface: #141414;
+  --line: #2a2a2a;
+  --text: #ffffff;
+  --muted: #b5b5b5;
+  --accent: #d9f26a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 64px;
+  background-color: var(--bg);
+}
+
+.logo {
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--text);
+  letter-spacing: 2px;
+}
+
+.navbar nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 32px;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: var(--accent);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+section {
+  padding: 64px;
+  border-bottom: 1px solid var(--line);
+}
+
+.aboutme {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.aboutme h2 {
+  font-size: 74px;
+  font-weight: 400;
+}
+
+.aboutme div {
+  width: 700px;
+}
+
+.aboutme div h3 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.aboutme div p {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.about-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.about-actions .btn-primary {
+  color: var(--bg);
+  background-color: var(--accent);
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-primary:hover,
+.connectme form button:hover,
+.dot {
+  background-color: var(--bg);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.about-actions .btn-primary .dot {
+  margin-left: 6px;
+  background-color: var(--bg);
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+}
+
+.download {
+  display: none;
+}
+
+.about-actions .social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--line);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.wrap-img {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  padding: 64px;
+  border-radius: 16px;
+  background-color: var(--muted);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .wrap-img img {
+  width: 400px;
+}
+
+.capabilities {
+  display: flex;
+  justify-content: space-between;
+}
+
+.capabilities h2 {
+  font-size: 64px;
+  width: auto;
+}
+
+.capabilities .skill {
+  width: 600px;
+}
+
+.capabilities .skill .title-skill {
+  margin-bottom: 32px;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.capabilities .skill .skill-badge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.capabilities .skill .skill-badge p {
+  padding: 6px 24px;
+  font-size: 16px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+}
+
+.my-experience {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-experience h2 {
+  font-size: 64px;
+  width: auto;
+}
+
+.my-experience .wrap-exp {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.my-experience .wrap-exp .exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.my-experience .wrap-exp .exp-list .exp-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my-experience .wrap-exp .exp-list p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.my-experience .wrap-exp .exp-list span {
+  color: var(--accent);
+}
+
+.my-experience .wrap-exp .exp-list .exp-head p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.connectme {
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.connectme .connect-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.connectme .connect-wrap .credits {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.connectme .connect-wrap div h2 {
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.connectme .connect-wrap div p {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.connectme .connect-wrap div p a {
+  font-size: 16px;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+.connectme .connect-wrap div .socials {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.connectme form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.connectme form label {
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.connectme form input {
+  background-color: var(--line);
+  color: var(--text);
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.connectme form textarea {
+  margin-bottom: 32px;
+  height: 156px;
+  background-color: var(--line);
+  color: var(--text);
+  border: none;
+  border-radius: 4px;
+}
+
+.connectme form button {
+  background-color: var(--accent);
+  color: var(--surface);
+  font-size: 16px;
+  font-weight: 700;
+  width: 150px;
+  height: 54px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 80px;
+}
+
+footer {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 54px;
+  }
+
+  .aboutme {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .aboutme > .content {
+    width: 100%;
+    max-width: 700px;
+    min-width: 0;
+  }
+
+  .about-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  .about-actions .btn-primary,
+  .about-actions .social-icon {
+    height: 44px;
+    box-sizing: border-box;
+  }
+
+  .about-actions .social-icon {
+    width: 44px;
+    flex: 0 0 44px;
+  }
+}
+
+/* ---------- Mobile (<= 768px) ---------- */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  /* hamburger */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--text);
+  }
+
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 58px;
+    right: 18px;
+    z-index: 5;
+    min-width: 150px;
+    padding: 8px 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+
+  .navbar nav.tampil-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar nav a {
+    display: block;
+    margin: 0;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  section {
+    padding: 40px 24px;
+  }
+
+  .aboutme,
+  .capabilities,
+  .my-experience,
+  .connectme {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .aboutme div,
+  .capabilities .skill,
+  .my-experience .wrap-exp,
+  .connectme .connect-wrap,
+  .connectme form {
+    width: 100%;
+  }
+
+  .aboutme h2 {
+    font-size: 44px;
+  }
+
+  .capabilities h2,
+  .my-experience h2,
+  .connectme .connect-wrap div h2 {
+    font-size: 44px;
+  }
+
+  .aboutme div h3 {
+    font-size: 24px;
+  }
+
+  .wrap-img {
+    margin: 32px 0;
+    padding: 32px 16px;
+  }
+
+  .about .wrap-img img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .my-experience .wrap-exp {
+    gap: 40px;
+  }
+
+  .my-experience .wrap-exp .exp-list .exp-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .connectme {
+    height: auto;
+  }
+
+  .connectme .connect-wrap {
+    gap: 48px;
+  }
+
+  .connectme form input,
+  .connectme form textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .connectme form textarea {
+    padding: 12px 16px;
+    font-family: inherit;
+  }
+
+  .connectme form button {
+    width: 160px;
+    height: 44px;
+  }
+
+  .connectme .connect-wrap .credits {
+    display: none;
+  }
+
+  footer {
+    display: block;
+    padding: 40px 24px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+}
+
+/* ---------- Small phones (<= 480px) ---------- */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 14px 16px;
+  }
+
+  .navbar nav {
+    padding: 8px 16px 20px;
+  }
+
+  section {
+    padding: 32px 16px;
+  }
+
+  .dot {
+    display: none;
+  }
+
+  .download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    padding: 4px;
+    background-color: var(--bg);
+    color: var(--text);
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .aboutme h2 {
+    font-size: 48px;
+  }
+
+  .about-actions .btn-primary {
+    height: 40px;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    font-size: 12px;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .about-actions {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .about-actions .social-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+  }
+
+  .about-actions .social-icon img {
+    width: 17px;
+    height: 17px;
+  }
+
+  .wrap-img {
+    margin-top: 64px;
+  }
+
+  .capabilities h2,
+  .my-experience h2,
+  .connectme .connect-wrap div h2 {
+    font-size: 48px;
+  }
+
+  .aboutme div h3 {
+    font-size: 24px;
+  }
+
+  .capabilities .skill .skill-badge {
+    gap: 10px;
+  }
+
+  .capabilities .skill .skill-badge p {
+    padding: 6px 16px;
+    font-size: 14px;
+  }
+
+  .about-actions .btn-primary {
+    padding: 12px 20px;
+  }
+
+  .connectme .connect-wrap .credits {
+    display: none;
+  }
+
+  .connectme form button {
+    width: 120px;
+    height: 40px;
+  }
+
+  footer {
+    padding: 32px 16px;
+  }
+}
